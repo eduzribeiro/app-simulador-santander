@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="me.dio.simulatorsantander">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,10 +16,11 @@
         android:theme="@style/Theme.SimulatorSantander"
         tools:targetApi="31">
         <activity
-            android:name=".DetailActivity"
-            android:exported="false" />
+            android:name=".ui.DetailActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.MainActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
